@@ -1,0 +1,137 @@
+nav {
+  position: fixed;       /* stays at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;          /* fixed height */
+  z-index: 1000;
+  background: #fff;      /* white background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  display: flex;         /* align logo and nav items */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+/* Push main content down so it doesn't overlap */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("image/collImg.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; 
+
+}
+
+h1, form {
+  margin-top: 120px; /* adjust depending on navbar height */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Style the form for consistency */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form select {
+  padding: 12px 15px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+
+form button {
+  padding: 10px;
+  font-size: 16px;
+  background: transparent;
+  color: white;
+    border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Push content below navbar */
+.container {
+  margin-top: 70px; /* same as nav height */
+  min-width: 100%;
+  min-height: calc(100vh - 70px); /* full height minus navbar */
+  padding: 20px;
+
+  background-image: linear-gradient(
+      rgba(9, 5, 54, 0.3),
+      rgba(5, 4, 46, 0.7)
+    ),
+    url("image/collImg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#addcourse {
+  color: white;
+  background-color: fcc93a;
+  border: none;
+  transition: all 0.4s ease-in-out; /* Smooth transition */
+  transform: translateY(0); /* Initial position */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#addcourse:hover {
+  color: rgb(21, 21, 100);
+  background-color: white;
+  transform: translateY(-3px); /* Lifts button up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+form select:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+form select:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: goldenrod;
+  box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.3);
+}
+
+/* Style dropdown options */
+/* Style dropdown options to match background */
+form select option {
+  background: rgba(9, 5, 54, 0.95);
+  color: white;
+  padding: 12px 15px;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+form select option:hover {
+  background: rgba(218, 165, 32, 0.3) !important;
+  color: white;
+}
+
+form select option:checked {
+  background: rgba(218, 165, 32, 0.4);
+  color: white;
+}
