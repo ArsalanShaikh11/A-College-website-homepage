@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Course</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="css/AddCourse.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="home.html">
+      <img src="image/logo-flat.png" alt="Logo" />
+    </a>
+    <div class="navigation">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#">DEPARTMENTS</a></li>
+        <li><a href="#">EVENTS</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <!-- <li><a href="AddCourse.html">Add Courses</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container" style="background-image: url(image/colll.jpg);">
+    <h1>Add Course</h1>
+
+    <form id="addCourseForm">
+      <label for="department">Department:</label>
+      <select id="department" required>
+        <option value="">Select Department</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+      </select>
+
+      <label for="year">Year:</label>
+      <select id="year" required>
+        <option value="">Select Year</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+
+      <div id="subjectsContainer">
+        <!-- Semester subjects will appear here automatically -->
+      </div>
+
+      <button type="submit" id="addcourse">Add Course</button>
+    </form>
+  </div>
+
+  <script src="js/AddCourse.js"></script>
+</body>
+</html>
